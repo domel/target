@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Data in Datasets</title>
+    <meta charset="UTF-8">
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+      }
+      input#searchInput {
+      padding: 10px;
+      margin-bottom: 20px;
+      width: calc(100% - 22px);
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      }
+      hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, #ccc, #333, #ccc);
+      margin: 20px 0;
+      }
+      ul, li {
+      list-style: none;
+      }
+      ul {
+      padding-left: 4px;
+      margin-left: 3px;
+      }
+      h1 {
+      font-size: 150%;
+      }
+      h2 {
+      padding: 4px;
+      margin: 3px;
+      }
+      .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 2px;
+      margin-bottom: 15px;
+      }
+      .accordion-header {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #eee;
+      margin-top: 10px;
+      font-size: 18px; 
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      }
+      .accordion-header:hover {
+      background-color: #ccc;
+      }
+      @media (max-width: 600px) {
+      .accordion-header, input#searchInput {
+      font-size: 16px;
+      }
+      h1 {
+      font-size: 160%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Features inside the datasets</h1>
+    <input type="text" id="searchInput" placeholder="Search items..." onkeyup="filterItems()">
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" title="click to see details about dataset">Tîrgu_Mureș</h2>
+        <ul class="accordion-content">
+          <li>Sex
+          <li>Smoking
+          <li>Hypertension (HTN)
+          <li>Diabetes mellitus (DM)
+          <li>Dislipidemia
+          <li>Atrial fibrillation (Afib)
+          <li>History of myocardial infarction (MI)
+          <li>History of coronary angioplasty -percutaneous coronary intervention (PCI) or coronary bypass (CABG) 
+          <li>Stroke 
+          <li>>50% carotid stenosis
+          <li>Carotid occlusion
+          <li>Obesity
+          <li>Chronic kidney disease (CKD)
+          <li>Mitral stenosis
+          <li>Mitral regurgitation
+          <li>Aortic stenosis
+          <li>Aortic regurgitation
+          <li>Tricuspid regurgitation
+          <li>Active neoplasia
+          <li>
+            <hr>
+          <li>Age (years)
+          <li>Body mass index (BMI)
+          <li>Leukocyte count (/µl))
+          <li>Erytrocyte count (x106/µl)
+          <li>Haemoglobin (g/dl)
+          <li>Platelet count (x103/µl)
+          <li>Urea (mg/dl)
+          <li>Creatinine (mg/dl)
+          <li>Alanine transaminase (ALT) (U/l)
+          <li>Aspartate aminotransferase (AST) (U/l)
+          <li>NTproBNP (pg/ml)
+          <li>CT calcium score
+          <li>
+            <hr>
+          <li>Ejection fraction (EF)
+          <li>End-systolic diameter (mm)
+          <li>End-diastolic diameter (mm)
+          <li>Right ventricle diameter (mm)
+          <li>Aortic annulus (mm)
+          <li>Left atrium (mm)
+          <li>
+            <hr>
+          <li>Images
+          <li>1. Electrocardiography (scanned photo)
+          <li>2. Echocardiography acquisition (video)
+          <li>3. Carotid ultrasound acquisition (video)
+          <li>Computed Tomography acquisitions
+          <li>1. CT of the head
+          <li>2. CT angiography of the cerebral arteries
+          <li>3. CT angiography for carotid arteries
+          <li>4. Chest CT
+          <li>5. Cardiac CT angiography
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" title="click to see details about dataset">ODYSSEY</h2>
+      <ul class="accordion-content">
+        <li>GENDER 
+        <li>EVENT 
+        <li>ATRIUMFIBRILLATION
+        <li>MEDICATION_BEFORE_EVENT 
+        <li>USE_BLOODTHINNER
+        <li>CARBASALAATCALCIUM1 
+        <li>CARBASALAATDIPYRIDAMOL
+        <li>CLOPIDOGREL 
+        <li>ACENOCOUMAROL 
+        <li>MARCOUMAR 
+        <li>OTHERBLOODTHINNER 
+        <li>ANGINAPECTORIS
+        <li>MYOCARDIAL INFARCTION 
+        <li>DEEP_VEIN_TROMBOSIS 
+        <li>PULMONARY_EMBOLISM
+        <li>HEART_VALVE_DEFFECT 
+        <li>DEATH_AFTER_HOSPITALIZATION 
+        <li>ECG_PERFORMED 
+        <li>ECG_arrythmia_1 
+        <li>ECG_arrythmia_2 
+        <li>CAUSE_OF_DEATH
+        <li>EXPLANATION_DEATH 
+        <li>SMOKING 
+        <li>SIGARRETES_PER_DAY
+        <li>ALCOHOL_AMOUNT
+        <li>RELEASE_TO
+        <li>LAB_results 
+        <li>cardiaal_IPSS_atriumfibrilleren????
+      </ul>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" title="click to see details about dataset">FUTURE</h2>
+        <ul class="accordion-content">
+          <li>Bisex (gender) 
+          <li>Binat (nationality)
+          <li>Bstalg1 (date of hospitalization)
+          <li>Bstalg4 (destination after discharge)
+          <li>Bstidxalg (type of event)
+          <li>Bstvgaf (AF in history)
+          <li>bstmedopnbv1 (which bloodthinner use)
+          <li>bsttoxrkn1 (smoked) 
+          <li>bsttoxalc1 (alcohol use) 
+          <li>bstloleng1 (length)
+          <li>bstlogew1 (weight) 
+          <li>bstlosbpr (systolic bloodpressure, at least 24u after the event) 
+          <li>bstlodbpr (diastolic blood pressure, at least 24h after the event) 
+          <li>bstlosbpl (systolic blood pressure, at least 24h after the event)
+          <li>bstlodbpl (diastolic blood pressure, at least 24h after the event) 
+          <li>bstlohf1 (heartrate/min) 
+          <li>banalgint5c (palpitations) 
+          <li>banhart2 (arrythmia) 
+          <li>bpenecg (ECG yes/no?)
+          <li>baoecgritme (rhythm ecg)
+          <li>baoecgconcl (conclusion ECG)
+          <li>bstlabna1 (sodium) 
+          <li>bstlabka1 (potassium)
+          <li>bstlabur1 (urea) 
+          <li>bstlabkreat1 (creatinine)
+          <li>bstlabca1 (calcium)
+          <li>bstlabcrp1 (CRP) 
+          <li>bstlabgluc1 (glucose)
+          <li>bstlabhba1c1 (HbA1c) 
+          <li>bstlabchol1 (cholesterol)
+          <li>bstlablact1 (lactate)
+          <li>bstlabhb1 (hemoglobin) 
+          <li>bstlabtrom1 (platelets)
+          <li>bstlabinr1 (INR_international normalized ratio)
+          <li>bstlabaptt1 (APTT) 
+          <li>bstoverleden1 ( death during hospitalization)
+          <li>bstoverleden2 (date of death)
+          <li>bstoverleden3 (cause of death) 
+          <li>bstvgdm (history of diabetes)
+          <li>bstvght (history of hypertension)
+          <li>bstvgklep (cardiac valve disfunction
+          <li>bstnihssopn17 (NIHSS score)
+        </ul>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" title="click to see details about dataset">INKENDAAL-DB</h2>
+        <ul class="accordion-content">
+          <li>age
+          <li>sex
+          <li>unit
+          <li>diagnosis
+          <li>topology
+          <li>destination date
+          <li>test
+          <li>test item
+          <li>result
+          <li>
+          <li>
+            <hr>
+          <li>test item:
+          <li>Understanding text. Score   /8
+          <li>Understanding text. Remarks
+          <li>Reproductionscore /4
+          <li>Inferencescore   /4
+          <li>Understanding text. Percentile
+          <li>Understanding text. Severity scale
+          <li>Understanding text. Info.
+          <li>Naming professions. Score  /10
+          <li>Naming professions. Percentile
+          <li>Naming professions. Remarks
+          <li>Naming professions. Info
+          <li>Word finding. Score  /15
+          <li>Word finding.Percentile
+          <li>Word finding. Remarks.
+          <li>Word finding. Info
+          <li>Writing text. Score /20
+          <li>Text writing. Total number of words written
+          <li>Text writing. Time used (s).
+          <li>Text writing. Words per minute
+          <li>Text writing. Bonding Index
+          <li>Text writing. Remarks.
+          <li>Text writing. Percentile
+          <li>Text writing. Severity scale
+          <li>Text writing. info
+          <li>Photo Naming. Score /30
+          <li>Photo naming - remarks
+          <li>Photo naming. Percentiel
+          <li>Photo naming. Severity scale
+          <li>Photo naming. Info
+          <li>Story retelling. Score /18
+          <li>Story retelling. Remarks
+          <li>Story retelling.  Percentile
+          <li>Story retelling. Severity scale
+          <li>Story retelling. Info
+          <li>Number search. Score /99
+          <li>Number search. Remarks
+          <li>Number Search. Percentile
+          <li>Number search. Severity scale
+          <li>Number search. Info.
+          <li>Number search - number of items 1st min
+          <li>Number search - number of items 2nd min
+          <li>Number search - number of items 3rd min
+          <li>Number search - number of items 4th min
+          <li>Number search - number of items 5th min
+          <li>Repeating numbers. Score /20
+          <li>Numbers forward 4. Score /5
+          <li>Numbers forward 5. Score /5
+          <li>Numbers backward  4. Score /5
+          <li>Numbers backward 5. Score /5
+          <li>Repeating numbers. Remarks
+          <li>Repeating numbers. Percentile
+          <li>Repeating numbers. Severity scale.
+          <li>Repeating numbers. Info
+          <li>Learning information. Score /90
+          <li>Direct reproduction Spontaneous 1. Score /15
+          <li>Direct reproduction Spontaneous 2. Score /15
+          <li>Direct reproduction Spontaneous 3. Score /15
+          <li>Total direct reproduction Spontaneous. Score /45
+          <li>Delayed spontaneous reproduction. Score /15
+          <li>Delayed spontaneous reproduction with cue. Score /15
+          <li>Learning information. Recognition. Score /15
+          <li>Learning information. Remarks
+          <li>Learning information. Percentile
+          <li>Learning information. Severity scale
+          <li>Learning information. Info
+          <li>Reviewing sentences. Score (total time)
+          <li>Number of sentences correctly indicated. Score /50
+          <li>Number of sentences wrongly indicated. Score /50
+          <li>Reviewing sentences. Remarks
+          <li>Reviewing sentences. Percentile
+          <li>Reviewing sentences. Severity scale
+          <li>Reviewing sentences. Info
+          <li>Naming monuments. Score /10.
+          <li>Naming monuments - comments
+          <li>Naming monuments. Percentile
+          <li>Naming monuments. Severity scale
+          <li>Naming monuments. Info
+          <li>General conclusion
+          <li>++++
+          <li>item 1 UL Reflexactivity biceps/triceps brachii
+          <li>item 2 UL Shoulder elevation
+          <li>item 2 UL Shoulder retraction
+          <li>item 2 UL Shoulder abduction
+          <li>item 2 UL Shoulder exorotation
+          <li>item 2 UL Elbow flexion
+          <li>item 2 UL Forearm supination
+          <li>item 2 UL Shoulder endorotation/adduction
+          <li>item 2 UL Elbox extention
+          <li>item 2 UL Forearm pronation
+          <li>item 3 UL Hand on sacrum
+          <li>item 3 UL Shoulder anteflexion
+          <li>item 3  ULPro/supination
+          <li>UL Paretic side
+          <li>item 4 UL Arm abduction
+          <li>item 4 UL Arm anteflexion
+          <li>item 4 UL Arm pro/supination
+          <li>item 5 UL Normal reflexactivity
+          <li>Wrist position
+          <li>Wrist flexion
+          <li>Wrist position, 90° anteflexion shoulder
+          <li>Wrist flexion, 90° anteflexion shoulder
+          <li>Wrist circumduction
+          <li>Finger flexion
+          <li>Finger extension
+          <li>Case grip
+          <li>Lateral prehension grip
+          <li>Palmar prehension grip
+          <li>Tub grip
+          <li>Ball grip
+          <li>Finger nose test - intention tremor
+          <li>Finger nose test - dysmetria
+          <li>Finger nose test - speed
+          <li>item 1 Lower limbs reflex activity
+          <li>item 2 LL flexion hip
+          <li>item 2 LL flexion knee
+          <li>item 2 LL dorsiflexion
+          <li>item 2 LL extension hip
+          <li>item 2 LL adduction hip
+          <li>item 2 LL extension knee
+          <li>item 2 LL plantar flexion 
+          <li>item 3 LL flexion knee
+          <li>item 3 LL dorsiflexion
+          <li>Item 4 LL Knee flexion
+          <li>Item 4 LL Ankle dorsiflexion
+          <li>Item 5. LL Normal reflexactivity
+          <li>Knee heel test - intention tremor
+          <li>Knee heel test - dysmetria
+          <li>Knee heel test - speed
+          <li>Total score UL
+          <li>Total score LL
+          <li>Total score
+          <li>Remarks
+          <li>UL score short form
+          <li>LL score short form
+          <li>Total score short form
+          <li>++++
+          <li>Type of transfer
+          <li>Roll/transfer lying-seat over side
+          <li>High/low transfer
+          <li>Type of help with transfer
+          <li>Support at … during transfer
+          <li>Support tools during transfer
+          <li>Extra help health care worker(s) during transfer
+          <li>Guiding during transfer
+          <li>Points of attention during transfer
+          <li>++++
+          <li>Type of displacement
+          <li>Help with displacement
+          <li>Extra help health care worker(s) for displacement
+          <li>Support tools during displacement
+          <li>For how much time … (displacement)
+          <li>Remarks displacement
+          <li>Support during walking at ….
+          <li>Support tools during walking
+          <li>Medical order during displacement
+          <li>++++
+          <li>Sit to stand
+          <li>Independent standing
+          <li>Independent sitting
+          <li>From stand to sit
+          <li>Transfers
+          <li>Independent standing with eyes closed
+          <li>Independent standing with feet together
+          <li>Reaching forward with arms outstretched while standing
+          <li>Picking up an object from the ground while standing
+          <li>Turning with head
+          <li>Full rotation around axis (360º) in stance
+          <li>Alternating placement of foot
+          <li>Standing with one leg in front
+          <li>Standing on one leg
+          <li>Total score /56
+          <li>Interpretation
+          <li>Notes
+          <li>Test not possible
+          <li>Reason not possible
+          <li>++++
+          <li>1. Nutrition
+          <li>2. External care
+          <li>3. Bathing
+          <li>4. Dressing upper body
+          <li>5. Dressing lower body
+          <li>6. Toilet visits/use of bedpan
+          <li>7.1. Bladder control: degree of assistance
+          <li>7.2. Bladder control: frequency of incontinence
+          <li>8.1. Stool control: degree of assistance
+          <li>8.2. Stool control: freq. of incontinence
+          <li>9. Transfer: bed, chair, wheelchair
+          <li>10. Transfer: toilet
+          <li>11. Transfer: bathtub or shower
+          <li>12. Transfer: walking/driving a wheelchair
+          <li>13. Moving: climbing stairs
+          <li>14. Language
+          <li>15. Understanding
+          <li>16. Social interaction
+          <li>17. Problem-solving skills
+          <li>18. Memory
+          <li>Total score /126
+          <li>Note
+          <li>Motor subscore
+          <li>Cognitive subscore
+        </ul>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" title="click to see details about dataset">BasicMar</h2>
+        <ul class="accordion-content">
+          <li>Images (in DICOM and JPEG)
+          <li>BM*_CT directories: Multimodal CT in the context of acute stroke assessment refers to the combination of a non-contrast CT (NCCT) scan of the brain, a CT angiogram of the extracranial and intracranial neck vessels, and a CT perfusion scan of the entire brain.
+          <li>BM*_RM directories: The sequences of a brain MRI.
+          <li>BM*.jpg files: An electrocardiogram.
+          <li>inside:
+          <li>Patient ID: represents the individual patient ID.
+          <li>Study ID: refers to the study. For hospital del Mar data mean basically whether images belong to a baseline or a follow-up study.
+          <li>Series ID: this corresponds to the acquisition ID. For instance, whether the image is a FLAIR, T1, T2...so, it's basically the type of the image...(https://dicom.innolitics.com/ciods/cr-image/general-series/0020000e)
+          <li>dcm: dicom files. Each files represents an image, generally (but not always) obtained at the axial plane. Each dicom file contains a dicom header with the metadata.
+        </ul>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" title="click to see details about dataset">IntensivRHB</h2>
+        <ul class="accordion-content">
+          <li>ENGLISH/item description
+          <li>Patient identification
+          <li>CONNECTS TO SHEET M0
+          <li>Patient identification
+          <li>BIRTH_DATE
+          <li>Gender
+          <li>Home=Male
+          <li>Dona=Female
+          <li>Years_at_stroke
+          <li>DATE OF STROKE
+          <li>Preadmission date to be transferred to Rehabilitation unit
+          <li>Date of admission to neurorehabilitation unit
+          <li>Time from stroke onset to beginning of rehabilitation
+          <li>Time post-stroke (days)
+          <li>Time from preadmission to be transferred to neurorrehabilitation Unit
+          <li>Time in days
+          <li>Fx= (Column H-Column G)
+          <li>Discharge date
+          <li>STAY_days
+          <li>Time in days in Neurorehabilitation unit
+          <li>Fx=(Column J – Column H)
+          <li>Acute Hospital origin
+          <li>Selected only Hospital del Mar patients, we have more patients but images are not available
+          <li>IC-10 codification
+          <li>Type of stroke
+          <li>Isquemic=ischemic
+          <li>Hemorragic=hemorrhagic
+          <li>TOAST scale ( etiology)
+          <li>Llacunar=lacunar
+          <li>Cardioembolico=Cardioembolism
+          <li>Ateresclerotico= aterosesclerosis
+          <li>Indeterminado=indetermined
+          <li>Otras etiologías=others
+          <li>Family support
+          <li>. No soporte
+          <li>. Soporte
+          <li>Stroke location_OXFORD SCALE
+          <li>    • LACI
+          <li>    • PACI
+          <li>    • TACI
+          <li>    • POCI
+          <li>Affected brain side
+          <li>    1. Dret/Right
+          <li>    2. Esquerre/Left
+          <li>NIHSS_ADMISSION
+          <li>NIH Stroke Scale (NIHSS) Interpretation
+          <li>Score range:0-42
+          <li>Therapies indicated and intensity indicated:
+          <li>FISIO=Physiotherapy
+          <li>TO=Occupational therapy
+          <li>LOGO= SLP
+          <li>1 or 2 in reference to anumber of sessions per therapy indicated
+          <li>Previous stroke incontinence:
+          <li>. No
+          <li>. Mixta( fecal and Urinary incontinenece)
+          <li>. Urinaria( urinary incontinence)
+          <li>APHASIA
+          <li>. No aphasia
+          <li>. Motora ( Motor)
+          <li>. Sensitiva ( Sensitive)
+          <li>. Mixta (Both)
+          <li>DESTINY AT DISCHARGE:
+          <li>. DOMICILIO= HOME
+          <li>. UCO INTERNA= NURSING HOME CARE(internal)
+          <li>. UCO EXTERNA= NURSING HOME CARE(external)
+          <li>. RESIDENCIA= Residency
+          <li>. LARGA ESTA= Long stay public centre
+          <li>. TRAslado a agudos=Acute hospital
+          <li>. ALTRES=Others
+          <li>Indication of rehabilitation continuity at discharge
+          <li>. SÍ
+          <li>. No
+          <li>Rehablitation modality:
+          <li>    • Domiciliaria=Home rehabilitation
+          <li>    • Psmar ambulatoria= ambulatory REHB in H Mar
+          <li>    • Altres ambulatoria= Ambulatory rehabilitation in other centres
+          <li>    • No realiza= no needs of rehabilitation
+          <li>
+            <hr>
+          <li>Patient identification
+          <li>CONNECTS TO SHEET M0
+          <li>Moment of data registration:
+          <li>M0_BASAL= AT ADMISSION
+          <li>M1_ALTA= AT DISCHARGE
+          <li>M3_3MESOS=3-MO FOLLOW-UP FROM STROKE ONSET
+          <li>M6_6MESOS=6-MO FOLLOW-UP FROM STROKE ONSET
+          <li>M9_9 MESOS=9-MO FOLLOW-UP FROM STROKE ONSET
+          <li>M12_12MESOS=1 YEAR FOLLOW-UP
+          <li>Modified Ranking Scale (mRS)
+          <li>Area of assessment:
+          <li>Activities of Daily Living Functional Mobility
+          <li>Score: 0-5
+          <li>(0) = No symptoms.
+          <li>(1) = No significant disability despite symptoms; able to carry out all usual duties and activities.
+          <li>(2) = Slight disability: unable to carry out all previous activities but able to look after own affairs without assistance.
+          <li>(3) = Moderate disability: requiring some help, but able to walk without assistance.
+          <li>(4) = Moderately severe disability: unable to walk without assistance, and unable to attend to own bodily needs without assistance.
+          <li>(5)= Severe disability: bedridden, incontinent, and requiring constant nursing care and attention.
+          <li>Barthel index_ADMISSION
+          <li>BI Score Interpretation (The Sinoff 1997 Interpretation):
+          <li>Range 0-100
+          <li>. Totally dependent (&lt;20)
+          <li>. Very dependent (20-39)
+          <li>. Partially dependent (40-59)
+          <li>.Minimally dependent (60-79)
+          <li>. Independent (patient should be able to live independently) (80-100)
+          <li>Scores range from 18 (lowest) to 126 (highest) indicating level of function.
+          <li>FIM efficiencies >0.6 points/day are typically accepted as clinically significant, whereas a &lt;0.6 unit/day change represents a poor rate of improvement (Werner, 1994)
+          <li>FIM_MOTOR_BASAL ( at admission)
+          <li>FIM-motor score
+          <li>(range, 13–91)
+          <li>FIM_COGNITIVE_BASAL ( at admission):
+          <li>FIM-cognitive score
+          <li>(range, 5-35)
+          <li>Barthel index_discharge
+          <li>BI Score Interpretation (The Sinoff 1997 Interpretation):
+          <li>Range 0-100
+          <li>. Totally dependent (&lt;20)
+          <li>. Very dependent (20-39)
+          <li>. Partially dependent (40-59)
+          <li>.Minimally dependent (60-79)
+          <li>. Independent (patient should be able to live independently) (80-100)
+          <li>Scores range from 18 (lowest) to 126 (highest) indicating level of function.
+          <li>FIM efficiencies >0.6 points/day are typically accepted as clinically significant, whereas a &lt;0.6 unit/day change represents a poor rate of improvement (Werner, 1994)
+          <li>FIM_MOTOR_DISCHARGE:
+          <li>FIM-motor score
+          <li>(range, 13–91)
+          <li>FIM_COGNITIVE_DISCHARGE :
+          <li>FIM-cognitive score
+          <li>(range, 5-35)
+          <li>Points of total FIM improved
+          <li>Fx= column I-column E
+          <li>Modified Ranking Scale (mRS)at discharge
+          <li>Area of assessment:
+          <li>Activities of Daily Living Functional Mobility
+          <li>Score: 0-5
+          <li>(0) = No symptoms.
+          <li>(1) = No significant disability despite symptoms; able to carry out all usual duties and activities.
+          <li>(2) = Slight disability: unable to carry out all previous activities but able to look after own affairs without assistance.
+          <li>(3) = Moderate disability: requiring some help, but able to walk without assistance.
+          <li>(4) = Moderately severe disability: unable to walk without assistance, and unable to attend to own bodily needs without assistance.
+          <li>(5)= Severe disability: bedridden, incontinent, and requiring constant nursing care and attention.
+          <li>
+          <li>Fugl Meyer ( COLUM N ) for some patients.
+          <li>It is FuglMeyer at admission (M0). Patients from 2023 and 2024, fugl meyer is registered in TO. (Column AR)
+          <li>
+          <li>Evaluates and measures recovery in post-stroke hemiplegic patients
+          <li>Used in both clinical and research settings
+          <li>FMA-UE is scored out of 66:
+          <li>    • with sub-scores of 36 for the upper arm-
+          <li>    • 30 for the wrist and hand.
+          <li>Neuropsiocological evaluation during hospital stay -admission
+          <li>0. NO
+          <li>1.YES
+          <li>Columns Q and R are de same items of columns X and X ( but it were recorded in different way)
+          <li>Patientsform 2021 and 2022 are in columns Q and R, patients from 2023 and2024 are in columns X and X
+          <li>999 is not recorded
+          <li>Gait velocity interpretation:
+          <li>(1) = Household Ambulator (&lt;0.40 m/s)
+          <li>(2) = Limited Community Ambulator (0.40 to &lt;0.80 m/s)
+          <li>(3) = Community Ambulator (≥0.80 m/s)
+          <li>Gait velocity_basal
+          <li>Meter/sec
+          <li>Velocitat marxa _ALTA
+          <li>Gait velocity_Discharge
+          <li>Meter/sec
+          <li>TEST CLINIC DE DEGLUCIO=
+          <li>SCREENING OF DYSPHAGIA WITH VOLUME-VISCOSITY SWALLOW TEST at admission
+          <li>Sí=performed
+          <li>No= not performed
+          <li>VOLUME-VISCOSITY SWALLOW TEST_ORALPHASE
+          <li>. Normal
+          <li>. Alt eficacia=efficacy disturbance
+          <li>. Alt seguridad= security disturbance
+          <li>VOLUME-VISCOSITY SWALLOW TEST_PHARYNGEALPHASE
+          <li>. Normal
+          <li>. Alt eficacia=efficacy disturbance
+          <li>. Alt seguridad= security disturbance
+          <li>VIDEOFLUOROSCOPIA
+          <li>VIDEOFLUOROSCOPY swallow study
+          <li>SI= PERFORMED
+          <li>NO=NOT PERFORMED
+          <li>Result of VFSS performed:
+          <li>Alterada= not normal
+          <li>Normal
+          <li>FUNCTIONAL Oral intake scale at admission (M0) :
+          <li>    1. Nothing by mouth
+          <li>    2. Tube dependent with minimal attempts of food or liquid
+          <li>    3. Tube dependent with consistent oral intake food and liquids
+          <li>    4. Total oral of a single consistency
+          <li>    5. Total diet, multiple consistencies but requiring special preparation
+          <li>    6. Total diet with multiple consistenciaes without special preparation, but food limitations
+          <li>    7. Total diet with no restriccions
+          <li>Jamar Plus digital dynamometer is used. The observed measurements are expressed in values Absolute (Kg) .
+          <li>Percentage of the reference values for the Mediterranean population (Luna-Heredia E et al. Clin Nutr 2005).
+          <li>AT ADMISSION :M0
+          <li>HANDGRIP_Strength _RIGHT_HAND_kg
+          <li>AT ADMISSION: M0
+          <li>HANDGRIP_Strength _LEFT_HAND_kg
+          <li>AT admission (M0):
+          <li>Incontinence:
+          <li>. No
+          <li>. Mixta( fecal and Urinary incontinence)
+          <li>. Urinaria( urinary incontinence)
+          <li>FUNCTIONAL Oral intake scale at discharge (M1) :
+          <li>    1. Nothing by mouth
+          <li>    2. Tube dependent with minimal attempts of food or liquid
+          <li>    3. Tube dependent with consistent oral intake food and liquids
+          <li>    4. Total oral of a single consistency
+          <li>    5. Total diet, multiple consistencies but requiring special preparation
+          <li>    6. Total diet with multiple consistenciaes without special preparation, but food limitations
+          <li>    7. Total diet with no restriccions
+          <li>AT DISCHARGE:M1
+          <li>HANDGRIP_Strength _RIGHT_HAND_kg
+          <li>**(AL COLUMN)
+          <li>AT DISCHARGE: M1
+          <li>HANDGRIP_Strength _LEFT_HAND_kg
+          <li>**(AM COLUMN)
+          <li>AT admission (M0):
+          <li>Incontinence:
+          <li>. No
+          <li>. Mixta( fecal and Urinary incontinence)
+          <li>. Urinaria( urinary incontinence)
+          <li>
+            <hr>
+          <li>ENGLISH/item description
+          <li>Dominant_HAND:
+          <li>DRETA/RIGHT
+          <li>ESQUERRA/LEFT
+          <li>Affected side
+          <li>DRET/RIGHT
+          <li>ESQUERRA/LEFT
+          <li>Cognitive affection:
+          <li>    1. AFASIA
+          <li>    2. AFASIA MOTORA
+          <li>    3. AFASIA SENSITIVA
+          <li>    4. ATENCIONAL
+          <li>    5. DET_COGNITIU
+          <li>    6. EXECUTIU
+          <li>    7. BLANK
+          <li>The MoCA website states ranges may be used to grade severity: 
+          <li>– 18-25 = mild cognitive impairment,
+          <li>– 10-17= moderate cognitive impairment
+          <li>– less than 10= severe cognitive impairment.
+          <li>BI Score Interpretation (The Sinoff 1997 Interpretation):
+          <li>Range 0-100
+          <li>. Totally dependent (&lt;20)
+          <li>. Very dependent (20-39)
+          <li>. Partially dependent (40-59)
+          <li>.Minimally dependent (60-79)
+          <li>. Independent (patient should be able to live independently) (80-100)
+          <li>The Lawton Instrumental Activities of Daily Living (IADL) Scale.
+          <li>To avoid potential gender bias
+          <li>A summary score ranges from:
+          <li>. FOR WOMEN: 0 (low function, dependent) to 8 (high function, independent)
+          <li>. FOR MEN: 0 through 5
+          <li>Jamar Plus digital dynamometer is used. The observed measurements are expressed in values Absolute (Kg) .
+          <li>Percentage of the reference values for the Mediterranean population (Luna-Heredia E et al. Clin Nutr 2005).
+          <li>HANDGRIP_Strength _RIGHT_HAND_kg
+          <li>HANDGRIP _Strength _LEFT_ HAND_kg
+          <li>Scoring: Patients are scored based on the number of blocks transferred from one compartment to the other compartment in 60 seconds
+          <li>TO.BOX&BLOCK_RIGHT HAND
+          <li>.
+          <li>TO.BOX&BLOCK_LEFT HAND
+          <li>The Nine-Hole Peg Test (9-HPT) is a standardized, quantitative assessment used to measure finger dexterity.
+          <li>Scored in seconds to perform the task
+          <li>NHPT_RIGHT
+          <li>NHPT_LEFT
+          <li>Evaluates and measures recovery in post-stroke hemiplegic patients
+          <li>Used in both clinical and research settings
+          <li>FMA-UE is scored out of 66:
+          <li>    • with sub-scores of 36 for the upper arm-
+          <li>    • 30 for the wrist and hand.
+          <li>FUGLMEYER_UPPERLIMB
+          <li>
+            <hr>
+          <li>Label
+          <li>Swallowing screening:
+          <li>VOLUME VISCOSITY SWALLOW TEST
+          <li>Radiological test to evaluate swallowing
+          <li>VIDEOFLUOROCOPY
+          <li>Maximum anterior lingual pressure (absolute value)
+          <li>Maximum anterior lingual pressure (percentage)
+          <li>Maximum posterior lingual pressure (absolute value)
+          <li>Maximum posterior lingual pressure (percentage respect age and gender group)
+          <li>Maximum anterior lingual endurance (absolute value)
+          <li>Maximum anterior lingual endurance (percentage respect age and gender group))
+          <li>Maximum posterior lingual endurance (absolute value)
+          <li>Maximum posterior lingual endurance (percentage respect age and gender group)
+          <li>Right liabial strength
+          <li>Left labial strength
+          <li>Voluntary cough force (PEAK FLOW)
+          <li>Normal adult PCF> 440-1200 L/min,
+          <li>≥ 270 L/min PCF demonstrates adequate cough
+          <li>≤ 160 L/min demonstrates inefficient cough.
+          <li>Maximum RESPIRATORY pressures
+          <li>Maximum inspiratory pressure (absolute value)
+          <li>Maximum inspiratory pressure (percentage)
+          <li>Maximum expiratory pressure (absolute value)
+          <li>Maximum expiratory pressure (percentage)
+          <li>Language alteration
+          <li>Token Test (Versión reducida de De Renzi y Faglioni, 1978)
+          <li>Phonological verbal fluency (absolute value)
+          <li>TBR Test Barcelona Revisado (J. Peña-Casanova, 2005)
+          <li>Phonological verbal fluency (percentile)
+          <li>TBR Test Barcelona Revisado (J. Peña- Casanova, 2005)
+          <li>Semantic verbal fluency (absolute value)
+          <li>TBR Test Barcelona Revisado (J. Peña- Casanova, 2005)
+          <li>Semantic verbal fluency (percentile)
+          <li>TBR Test Barcelona Revisado (J. Peña- Casanova, 2005)
+          <li>Speech therapy intervention:
+          <li>    • LOGOPEDIA_ORYGEN= SLP_OrygenVAlve (2)
+          <li>    • LOGOPEDIA_NMES(VITAL STIM)= SLP_NMES (2)
+          <li>    • VITALSTIM + VALVULAORYGEN=SLP_NMS+RMT (2)
+          <li>    • PRAXIES=PRAXIAS (1)
+          <li>    • Articulació=SLP_ARTICULATION TRAINING(1)
+          <li>    • Llenguatge=SLP_LANGUAGETRAINING (1)
+          <li>    • Cap Intervenció=NOTHING (3)
+          <li>
+            <hr>
+          <li>ENGLISH/item description
+          <li>10 Meter Walk Test (10mWT)
+          <li>In meter/second
+          <li>BERG SCALE
+          <li>(Balance Scale)
+          <li>Score: in seconds
+          <li>Test Up and go
+          <li>Score: in seconds
+          <li>External support device/system for walking :
+          <li>. Ortesi antiequina= Anti-equine ortheses
+          <li>. 1 BA = 1 Cross
+          <li>. 2 BA= 2 crushes
+          <li>. Caminador= Walker
+          <li>. CAdirade rodes = Wheel chair
+          <li>. Bastó de>2 punts=2 or > point stick
+          <li>. Bitutot= Bitutor
+          <li>. Altres =Others
+          <li>. Res=nothing
+          <li>
+            <hr>
+          <li>Group
+          <li>Age (years)
+          <li>Gender
+          <li>Dominant upper limb
+          <li>Dominant lower limb
+          <li>Time post-stroke (months)
+          <li>Time post-stroke (days)
+          <li>Type of stroke
+          <li>Side of the paresis (affected side)
+          <li>Weight (kg)
+          <li>Hight (cm)
+          <li>Body Mass Index - BMI (kg/m2)
+          <li>Body Mass Index - BMI (Categories)
+          <li>NIH Stroke Scale (NIHSS)
+          <li>NIH Stroke Scale (NIHSS) Interpretation
+          <li>Type of Assistive Device and/or Bracing Used (Walking Aids)
+          <li>
+            <hr>
+          <li>Sitting unsupported
+          <li>Sitting to standing
+          <li>Standing to sitting
+          <li>Standing unsupported
+          <li>Transfers
+          <li>Standing unsupported with eyes closed
+          <li>Standing unsupported with feet together
+          <li>Tandem standing (standing unsupported one foot in front)
+          <li>Reaching forward with outstretched arm while standing
+          <li>Turning to look behind over left and right shoulders while standing (feet fixed)
+          <li>Turning 360 degrees
+          <li>Place alternate foot on step/stool while standing unsupported (stool stepping)
+          <li>Standing on one leg
+          <li>Pick up object from the floor from a standing position
+          <li>BBS Total Score
+          <li>BBS Score Interpretation
+          <li>
+            <hr>
+          <li>TUG Time (s)
+          <li>TUG Score Interpretation
+          <li>TUG Score Interpretation (Risk of falls)
+          <li>Average Self-Selected Gait Velocity (m/s)
+          <li>Average Fast Gait Velocity (m/s)
+          <li>Self-Selected Walking Speed Interpretation
+          <li>
+            <hr>
+          <li>Dress the top part (from the waist up) of your body?
+          <li>Wash yourself (bath, shower...)?
+          <li>Get to the toilet on time?
+          <li>Control your bladder (not have an accident)?
+          <li>Control your bowels (not have an accident)?
+          <li>Standing without losing your balance?
+          <li>Go shopping?
+          <li>Do heavy household tasks/chores (e.g., vacuum, laundry or gardening)?
+          <li>Stay sitting without losing your balance?
+          <li>Walk without losing your balance?
+          <li>Move from a bed to a chair?
+          <li>Walk fast?
+          <li>Climb one flight of stairs?
+          <li>Walk one 100 yards (or block of houses)?
+          <li>Get in and out of a car?
+          <li>Carry heavy objects (e.g., bag of groceries) with your affected hand?
+          <li>Stroke Impact Scale (SIS-16) Total Score
+          <li>Modified Ranking Scale (mRS)
+          <li>
+            <hr>
+          <li>ROA Total Displacement (mm)
+          <li>ROA Displacement Angle (°)
+          <li>ROA Mediolateral (ML) Dispersed X (mm)
+          <li>ROA Anteroposterior (AP) Dispersed Y (mm)
+          <li>ROA Average Speed (m/s)
+          <li>ROA Mediolateral (ML) Displacement (mm)
+          <li>ROA Anteroposterior (AP) Displacement (mm)
+          <li>ROA Mediolateral (ML) Maximal Force (N)
+          <li>ROA Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Open (ROA) (%)
+          <li>ROC Total Displacement (mm)
+          <li>ROC Displacement Angle (°)
+          <li>ROC Mediolateral (ML) Dispersed X (mm)
+          <li>ROC Anteroposterior (AP) Dispersed Y (mm)
+          <li>ROC Average Speed (m/s)
+          <li>ROC Mediolateral (ML) Displacement (mm)
+          <li>ROC Anteroposterior (AP) Displacement (mm)
+          <li>ROC Mediolateral (ML) Maximal Force (N)
+          <li>ROC Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Closed (ROC) (%)
+          <li>RGA Total Displacement (mm)
+          <li>RGA Displacement Angle (°)
+          <li>RGA Mediolateral (ML) Dispersed X (mm)
+          <li>RGA Anteroposterior (AP) Dispersed Y (mm)
+          <li>RGA Average Speed (m/s)
+          <li>RGA Mediolateral (ML) Displacement (mm)
+          <li>RGA Anteroposterior (AP) Displacement (mm)
+          <li>RGA Mediolateral (ML) Maximal Force (N)
+          <li>RGA Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Open on Foam Cushion (RGA) (%)
+          <li>RGC Total Displacement (mm)
+          <li>RGC Displacement Angle (°)
+          <li>RGC Mediolateral (ML) Dispersed X (mm)
+          <li>RGC Anteroposterior (AP) Dispersed Y (mm)
+          <li>RGC Average Speed (m/s)
+          <li>RGC Mediolateral (ML) Displacement (mm)
+          <li>RGC Anteroposterior (AP) Displacement (mm)
+          <li>RGC Mediolateral (ML) Maximal Force (N)
+          <li>RGC Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Closed on Foam Cushion (RGC) (%)
+          <li>ROA Mediolateral (ML) Stability (%)
+          <li>ROC Mediolateral (ML) Stability (%)
+          <li>RGA Mediolateral (ML) Stability (%)
+          <li>RGC Mediolateral (ML) Stability (%)
+          <li>Romberg Test Mediolateral (ML) Stability Assessment (%)
+          <li>ROA Anteroposterior (AP) Stability (%)
+          <li>ROC Anteroposterior (AP) Stability (%)
+          <li>RGA Anteroposterior (AP) Stability (%)
+          <li>RGC Anteroposterior (AP) Stability (%)
+          <li>Romberg Test Anteroposterior (AP) Stability Assessment (%)
+          <li>Somatosensory System (%)
+          <li>Visual System (%)
+          <li>Vestibular System (%)
+          <li>Dynamic System (%)
+          <li>Sensory - Dynamic (SENS-DYN) Total Score (%)
+          <li>
+            <hr>
+          <li>Forward (F) Maximum Displacement (%)
+          <li>Forward (F) Directional Control (%)
+          <li>Forward (F) Reaction Time (s)
+          <li>Forward (F) Assessment Score (%)
+          <li>Right-Forward (RF) Maximum Displacement (%)
+          <li>Right-Forward (RF) Directional Control (%)
+          <li>Right-Forward (RF) Reaction Time (s)
+          <li>Right-Forward (RF) Assessment Score (%)
+          <li>Right (R) Maximum Displacement (%)
+          <li>Right (R) Directional Control (%)
+          <li>Right (R) Reaction Time (s)
+          <li>Right (R) Assessment Score (%)
+          <li>Right-Backward (RB) Maximum Displacement (%)
+          <li>Right-Backward (RB) Directional Control (%)
+          <li>Right-Backward (RB) Reaction Time (s)
+          <li>Right-Backward (RB) Assessment Score (%)
+          <li>Backward (B) Maximum Displacement (%)
+          <li>Backward (B) Directional Control (%)
+          <li>Backward (B) Reaction Time (s)
+          <li>Backward (B) Assessment Score (%)
+          <li>Left-Backward (LB) Maximum Displacement (%)
+          <li>Left-Backward (LB) Directional Control (%)
+          <li>Left-Backward (LB) Reaction Time (s)
+          <li>Left-Backward (LB) Assessment Score (%)
+          <li>Left (L) Maximum Displacement (%)
+          <li>Left (L) Directional Control (%)
+          <li>Left (L) Reaction Time (s)
+          <li>Left (L) Assessment Score (%)
+          <li>Left-Forward (LF) Maximum Displacement (%)
+          <li>Left-Forward (LF) Directional Control (%)
+          <li>Left-Forward (LF) Reaction Time (s)
+          <li>Left-Forward (LF) Assessment Score (%)
+          <li>Average Score of Maximum Displacement (%)
+          <li>Average Score of Directional Control (%)
+          <li>Average Score of Reaction Time (s)
+          <li>Limits of Stability (LOS) Analysis Score (%)
+          <li>
+            <hr>
+          <li>Mediolateral (ML) Ability (%)
+          <li>Mediolateral (ML) Control and Efficacy (%)
+          <li>Mediolateral (ML) Rhythmic and Directional Control Assessment (%)
+          <li>Anteroposterior (AP) Ability (%)
+          <li>Anteroposterior (AP) Control and Efficacy (%)
+          <li>Anteroposterior (AP) Rhythmic and Directional Control Assessment (%)
+          <li>Postural Control Assessment (Total Score) (%)
+          <li>Functional Balance Assessment - Global Score (%)
+          <li>Functional Balance Assessment - Global Score (Interpretation)
+          <li>
+            <hr>
+          <li>Feeding
+          <li>Bathing
+          <li>Grooming
+          <li>Dressing
+          <li>Bowels
+          <li>Bladder
+          <li>Toilet Use
+          <li>Transfers (bed to chair and back)
+          <li>Mobility (on level surfaces)
+          <li>Up and Down Stairs
+          <li>BI Total Score
+          <li>BI Score Interpretation (The Sinoff 1997 Interpretation)
+          <li>BI Score Interpretation (The Shah et al. 1989 Interpretation)
+          <li>
+            <hr>
+          <li>Dress the top part (from the waist up) of your body?
+          <li>Wash yourself (bath, shower...)?
+          <li>Get to the toilet on time?
+          <li>Control your bladder (not have an accident)?
+          <li>Control your bowels (not have an accident)?
+          <li>Standing without losing your balance?
+          <li>Go shopping?
+          <li>Do heavy household tasks/chores (e.g., vacuum, laundry or gardening)?
+          <li>Stay sitting without losing your balance?
+          <li>Walk without losing your balance?
+          <li>Move from a bed to a chair?
+          <li>Walk fast?
+          <li>Climb one flight of stairs?
+          <li>Walk one 100 yards (or block of houses)?
+          <li>Get in and out of a car?
+          <li>Carry heavy objects (e.g., bag of groceries) with your affected hand?
+          <li>Stroke Impact Scale (SIS-16) Total Score
+          <li>Modified Ranking Scale (mRS)
+          <li>
+            <hr>
+          <li>ROA Total Displacement (mm)
+          <li>ROA Displacement Angle (°)
+          <li>ROA Mediolateral (ML) Dispersed X (mm)
+          <li>ROA Anteroposterior (AP) Dispersed Y (mm)
+          <li>ROA Average Speed (m/s)
+          <li>ROA Mediolateral (ML) Displacement (mm)
+          <li>ROA Anteroposterior (AP) Displacement (mm)
+          <li>ROA Mediolateral (ML) Maximal Force (N)
+          <li>ROA Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Open (ROA) (%)
+          <li>ROC Total Displacement (mm)
+          <li>ROC Displacement Angle (°)
+          <li>ROC Mediolateral (ML) Dispersed X (mm)
+          <li>ROC Anteroposterior (AP) Dispersed Y (mm)
+          <li>ROC Average Speed (m/s)
+          <li>ROC Mediolateral (ML) Displacement (mm)
+          <li>ROC Anteroposterior (AP) Displacement (mm)
+          <li>ROC Mediolateral (ML) Maximal Force (N)
+          <li>ROC Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Closed (ROC) (%)
+          <li>RGA Total Displacement (mm)
+          <li>RGA Displacement Angle (°)
+          <li>RGA Mediolateral (ML) Dispersed X (mm)
+          <li>RGA Anteroposterior (AP) Dispersed Y (mm)
+          <li>RGA Average Speed (m/s)
+          <li>RGA Mediolateral (ML) Displacement (mm)
+          <li>RGA Anteroposterior (AP) Displacement (mm)
+          <li>RGA Mediolateral (ML) Maximal Force (N)
+          <li>RGA Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Open on Foam Cushion (RGA) (%)
+          <li>RGC Total Displacement (mm)
+          <li>RGC Displacement Angle (°)
+          <li>RGC Mediolateral (ML) Dispersed X (mm)
+          <li>RGC Anteroposterior (AP) Dispersed Y (mm)
+          <li>RGC Average Speed (m/s)
+          <li>RGC Mediolateral (ML) Displacement (mm)
+          <li>RGC Anteroposterior (AP) Displacement (mm)
+          <li>RGC Mediolateral (ML) Maximal Force (N)
+          <li>RGC Anteroposterior (AP) Maximal Force (N)
+          <li>Romberg Test with Eyes Closed on Foam Cushion (RGC) (%)
+          <li>ROA Mediolateral (ML) Stability (%)
+          <li>ROC Mediolateral (ML) Stability (%)
+          <li>RGA Mediolateral (ML) Stability (%)
+          <li>RGC Mediolateral (ML) Stability (%)
+          <li>Romberg Test Mediolateral (ML) Stability Assessment (%)
+          <li>ROA Anteroposterior (AP) Stability (%)
+          <li>ROC Anteroposterior (AP) Stability (%)
+          <li>RGA Anteroposterior (AP) Stability (%)
+          <li>RGC Anteroposterior (AP) Stability (%)
+          <li>Romberg Test Anteroposterior (AP) Stability Assessment (%)
+          <li>Somatosensory System (%)
+          <li>Visual System (%)
+          <li>Vestibular System (%)
+          <li>Dynamic System (%)
+          <li>Sensory - Dynamic (SENS-DYN) Total Score (%)
+          <li>
+            <hr>
+          <li>Forward (F) Maximum Displacement (%)
+          <li>Forward (F) Directional Control (%)
+          <li>Forward (F) Reaction Time (s)
+          <li>Forward (F) Assessment Score (%)
+          <li>Right-Forward (RF) Maximum Displacement (%)
+          <li>Right-Forward (RF) Directional Control (%)
+          <li>Right-Forward (RF) Reaction Time (s)
+          <li>Right-Forward (RF) Assessment Score (%)
+          <li>Right (R) Maximum Displacement (%)
+          <li>Right (R) Directional Control (%)
+          <li>Right (R) Reaction Time (s)
+          <li>Right (R) Assessment Score (%)
+          <li>Right-Backward (RB) Maximum Displacement (%)
+          <li>Right-Backward (RB) Directional Control (%)
+          <li>Right-Backward (RB) Reaction Time (s)
+          <li>Right-Backward (RB) Assessment Score (%)
+          <li>Backward (B) Maximum Displacement (%)
+          <li>Backward (B) Directional Control (%)
+          <li>Backward (B) Reaction Time (s)
+          <li>Backward (B) Assessment Score (%)
+          <li>Left-Backward (LB) Maximum Displacement (%)
+          <li>Left-Backward (LB) Directional Control (%)
+          <li>Left-Backward (LB) Reaction Time (s)
+          <li>Left-Backward (LB) Assessment Score (%)
+          <li>Left (L) Maximum Displacement (%)
+          <li>Left (L) Directional Control (%)
+          <li>Left (L) Reaction Time (s)
+          <li>Left (L) Assessment Score (%)
+          <li>Left-Forward (LF) Maximum Displacement (%)
+          <li>Left-Forward (LF) Directional Control (%)
+          <li>Left-Forward (LF) Reaction Time (s)
+          <li>Left-Forward (LF) Assessment Score (%)
+          <li>Average Score of Maximum Displacement (%)
+          <li>Average Score of Directional Control (%)
+          <li>Average Score of Reaction Time (s)
+          <li>Limits of Stability (LOS) Analysis Score (%)
+          <li>
+            <hr>
+          <li>Mediolateral (ML) Ability (%)
+          <li>Mediolateral (ML) Control and Efficacy (%)
+          <li>Mediolateral (ML) Rhythmic and Directional Control Assessment (%)
+          <li>Anteroposterior (AP) Ability (%)
+          <li>Anteroposterior (AP) Control and Efficacy (%)
+          <li>Anteroposterior (AP) Rhythmic and Directional Control Assessment (%)
+          <li>Postural Control Assessment (Total Score) (%)
+          <li>Functional Balance Assessment - Global Score (%)
+          <li>Functional Balance Assessment - Global Score (Interpretation)
+          <li>
+            <hr>
+          <li>Gait Speed (m/s)
+          <li>Average Gait Speed (%)
+          <li>Left Foot Support Time (s)
+          <li>Right Foot Support Time (s)
+          <li>Difference in Support Time (%)
+          <li>Left Anteroposterior Braking Force (N)
+          <li>Left Anteroposterior Braking Force (Normalized)
+          <li>Left Anteroposterior Braking Force Assessment (%)
+          <li>Right Anteroposterior Braking Force (N)
+          <li>Right Anteroposterior Braking Force (Normalized)
+          <li>Right Anteroposterior Braking Force Assessment (%)
+          <li>Anteroposterior Braking Force Global Score (%)
+          <li>Left Anteroposterior Propulsion Force (N)
+          <li>Left Anteroposterior Propulsion Force (Normalized)
+          <li>Left Anteroposterior Propulsion Force Assessment (%)
+          <li>Right Anteroposterior Propulsion Force (N)
+          <li>Right Anteroposterior Propulsion Force (Normalized)
+          <li>Right Anteroposterior Propulsion Force Assessment (%)
+          <li>Anteroposterior Propulsion Force Global Score (%)
+          <li>Left Vertical Take-off Force (N)
+          <li>Left Vertical Take-off Force (Normalized) (N)
+          <li>Left Vertical Take-off Force Assessment (%)
+          <li>Right Vertical Take-off Force (N)
+          <li>Right Vertical Take-off Force (Normalized) (N)
+          <li>Right Vertical Take-off Force Assessment (%)
+          <li>Vertical Take-off Force Global Score (%)
+          <li>Left Oscillation Force (N)
+          <li>Left Oscillation Force (Normalized) (N)
+          <li>Left Oscillation Force Assessment (%)
+          <li>Right Oscillation Force (N)
+          <li>Right Oscillation Force (Normalized) (N)
+          <li>Right Oscillation Force Assessment (%)
+          <li>Oscillation Force Global Score (%)
+          <li>Left Anteroposterior Force Morphology (Fx Morphology) (%)
+          <li>Right Anteroposterior Force Morphology (Fx Morphology) (%)
+          <li>Anteroposterior Force Morphology (Fx Morphology) Global Score (%)
+          <li>Left Mediolateral Force Morphology (Fy Morphology) (%)
+          <li>Right Mediolateral Force Morphology (Fy Morphology) (%)
+          <li>Mediolateral Force Morphology (Fy Morphology) Global Score (%)
+          <li>Left Vertical Force Morphology (Fz Morphology) (%)
+          <li>Right Vertical Force Morphology (Fz Morphology) (%)
+          <li>Vertical Force Morphology (Fz Morphology) Global Score (%)
+          <li>Left Foot Global Assessment (%)
+          <li>Right Foot Global Assessment (%)
+          <li>Functional Gait Analysis - Global Score (%)
+          <li>Functional Gait Analysis - Global Score (Interpretation)
+          <li>
+            <hr>
+          <li>I am satisfied with the type of exercises and training the therapist has given me.
+          <li>I think this exercises training program has helped me to improve my physical and functional status.
+          <li>I think this exercises training program has helped me to improve my ability to manage my daily life activities (personal hygiene, dressing, transferring/mobility, etc.).
+          <li>I am happy with the amount of recovery I have made since joining this exercises training program.
+        </ul>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" title="click to see details about dataset">Isansys</h2>
+        <ul class="accordion-content">
+          <li>Vital Signs. <small>The minute by minute data shown on the gateway and in the patient charts which are accessible on the Isansys Lifeguard Dashboard. Note the entry 61441 is an error message indicating that no HR measurement can be made. These usually occur at the start of the session when the Lifetouch is being fitted, or if the device disconnects as you saw. If Temperature, Blood Pressure, weight etc were part of the session data it would be shown here.</small>
+          <li>Session info. <small>Connectivity status, device activity and device log information for the session.</small>
+          <li>Gateway audit. <small>log A record of all interactions by a user with the Gateway</small>
+          <li>LT Heart Beats. <small>This is the fundamental heartbeat data we use to calculate the Heart Rate and Respiration Rate. The columns show the relative RS amplitude and the temporal position of the R peak as shown by the Timestamp in milliseconds (the ECG is sampled at 1000 samples per second). For convenience (e.g. for HRV studies) we calculate the R-R interval and also display an associated simple 3 level activity measure if this feature is activated. Note that the RS amplitudes are not scaled in mV, but are in fact ADC counts, in a direct linear relationship to mV.</small>
+          <li>Lifetouch Set Up Mode Logs. <small>A log showing when the Set Up (ECG) mode was switched on. The actual 100Hz Set-Up Mode (full ECG) data is in the separate file “qwerty234__Created_26Jan2024@1705_LT_Setup_Mode” and the Set Up Mode Logs tell you where to look for each of the ECG recordings you made. You can reconstruct the ECG from these values using a simple Line Chart function in Excel</small>
+          <li>Lifetouch Raw Accelerometer. <small>Values for each of the x, y and z outputs of the accelerometer at 10Hz sampling frequency.</small>
+          <li>Pulse Ox Set Up Mode Logs. <small>Similar to the Lifetouch Set Up Mode Logs, but for the PPG signal from the pulse oximeter. The actual 75 Hz Set-Up Mode (full PPG) data is in the separate file “qwerty234__Created_26Jan2024@1705_PO_Setup_Mode” and the Set Up Mode Logs tell you where to look for each of the PPG recordings you made. You can reconstruct the PPG from these values using a simple Line Chart function in Excel</small>
+          <li>Pulse Ox dd-mm-yyyy. <small>These are the oxygen saturations measurements uploaded every 1 seconds. The minute-by-minute values shown on the gateway are calculated from these.</small>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      });
+      
+      function filterItems() {
+        let input = document.getElementById('searchInput');
+        let filter = input.value.toUpperCase();
+        let accordion = document.getElementsByClassName('accordion-item');
+      
+        for (let i = 0; i < accordion.length; i++) {
+          let ul = accordion[i].getElementsByTagName('ul')[0];
+          let li = ul.getElementsByTagName('li');
+          let visible = false;
+      
+          for (let j = 0; j < li.length; j++) {
+            let txtValue = li[j].textContent || li[j].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[j].style.display = "";
+              visible = true;
+            } else {
+              li[j].style.display = "none";
+            }
+          }
+      
+          accordion[i].style.display = visible ? "" : "none";
+        }
+      }
+          
+    </script>
+  </body>
+</html>
+
